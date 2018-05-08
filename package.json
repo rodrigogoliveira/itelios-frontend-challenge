@@ -1,0 +1,24 @@
+{
+  "name": "itelios-frontend-challenge",
+  "version": "1.0.0",
+  "description": "![Itelios](http://www.itelios.com.br/images/logo_itelios_orange@2x.png)",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "./bin/build-css",
+    "watch-css": "./bin/watch-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigogoliveira/itelios-frontend-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodrigogoliveira/itelios-frontend-challenge/issues"
+  },
+  "homepage": "https://github.com/rodrigogoliveira/itelios-frontend-challenge#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.4"
+  }
+}
