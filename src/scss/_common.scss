@@ -1,0 +1,43 @@
+h3 {
+  margin-bottom: 15px;
+  letter-spacing: .7px;
+}
+.content {
+  width: $max-view-port - (emtopx($default-margin) * 2);
+  margin: 0 auto;
+}
+
+.container {
+  .content {
+    padding: $default-margin;
+    background: #fff;
+  }
+}
+
+.btn {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  padding: 16px;
+  cursor: pointer;
+  font-size: pxtoem(20px);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #1f2125;
+  border: 1px solid #d3d1d1;
+  &.button-buy {
+    i {
+      position: absolute;
+      top: 15px;
+      right: 12px;
+      font-size: pxtoem(28px);
+    }
+  }
+  &:hover {
+    border-left: 10px solid #ff6600;
+    padding-left: 7px;
+    i {
+      color: #ff6600;
+    }
+  }
+}

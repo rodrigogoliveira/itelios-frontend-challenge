@@ -1,0 +1,46 @@
+#carouselContainer {
+  display: inline-block;
+  width: 100%;
+  height: 460px;
+  position: relative;
+  .container-inner {
+    float:left;
+    width: $carousel-view-port;
+    overflow: hidden;
+  }
+
+  .container-ul {
+    left:($carousel-box-size + ($carousel-margin * 2)) * -1;
+    width:9999px;
+    z-index: 10;
+  }
+
+  .left-scroll, .right-scroll{
+    display: none;
+    float:left;
+    height:130px;
+    width:$carousel-button-size;
+    margin-top: 173px;
+    img {
+      cursor: pointer;
+      cursor: hand;
+    }
+  }
+
+  .container-paginator {
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    li {
+      border-radius: 50%;
+      background-color: $border;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

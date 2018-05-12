@@ -1,0 +1,14 @@
+$background: #ffffff;
+$border: #edeaea;
+$text-color: #303132;
+$title-color: #5e6774;
+
+$default-font-size: 12px;
+
+$max-view-port: 1280px;
+$default-margin: 1em;
+
+$carousel-button-size: 49px;
+$carousel-box-size: (($max-view-port - emtopx($default-margin) * 4) / 4);
+$carousel-view-port: $carousel-box-size * 3;
+$carousel-margin: 0;

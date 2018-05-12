@@ -1,0 +1,66 @@
+.products {
+  display: inline-grid;
+  .container-ul {
+    position:relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 10px;
+    li {
+      float: left;
+      width: $carousel-box-size - ($carousel-margin * 2);
+      padding:20px 25px;
+      margin: $carousel-margin;
+      border: 1px solid $border;
+      .image {
+        max-height: 200px;
+        a {
+          display: block;
+          text-align: center;
+        }
+        img {
+          cursor:pointer;
+          border:0;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .title {
+        font-size: pxtoem(16px);
+        letter-spacing: 1.4px;
+        line-height: 18px;
+        margin-bottom: 20px;
+      }
+      .price {
+        .price {
+          font-size: pxtoem(18px);
+          line-height: 35px;
+          strong {
+            font-size: 20px;
+            letter-spacing: 3px;
+          }
+        }
+        .paceled-price {
+          font-size: pxtoem(17px);
+          line-height: 33px;
+          strong {
+            letter-spacing: 1.4px;
+          }
+        }
+      }
+      .actions {
+        display: none;
+        margin-top: 18px;
+      }
+      &:hover {
+        background: #f4f4f4;
+        background: -moz-linear-gradient(top, #f4f4f4 0%, #ffffff 100%);
+        background: -webkit-linear-gradient(top, #f4f4f4 0%,#ffffff 100%);
+        background: linear-gradient(to bottom, #f4f4f4 0%,#ffffff 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ffffff',GradientType=0 );
+        .actions {
+          display: block;
+        }
+      }
+    }
+  }
+}

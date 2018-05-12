@@ -1,0 +1,19 @@
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Convert px to em
+@function pxtoem($target, $context: $default-font-size){
+	@return (strip-unit($target)/strip-unit($context))+0em;
+}
+// Convert em to px
+@function emtopx($target, $context: $default-font-size){
+	@return (strip-unit($target)*strip-unit($context))+0px;
+}
