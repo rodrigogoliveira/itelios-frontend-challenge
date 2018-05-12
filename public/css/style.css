@@ -242,3 +242,11 @@ h3 {
       height: 12px; }
       #carouselContainer .container-paginator li:hover, #carouselContainer .container-paginator li.active {
         background-color: #beb3b3; }
+
+@media (max-width: 1024px) {
+  #carouselContainer .container-inner {
+    width: 616px; } }
+
+@media (max-width: 768px) {
+  #carouselContainer .container-inner {
+    width: 308px; } }

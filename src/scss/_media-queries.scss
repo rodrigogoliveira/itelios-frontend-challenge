@@ -1,9 +1,20 @@
 @media (max-width: 1024px) {
   $max-view-port: 1024px;
 
+  #carouselContainer {
+    .container-inner {
+      width: $carousel-view-port - $carousel-box-size;
+    }
+  }
+
 }
 
 @media (max-width: 768px) {
   $max-view-port: 768px;
 
+  #carouselContainer {
+    .container-inner {
+      width: $carousel-view-port - ($carousel-box-size*2);
+    }
+  }
 }
