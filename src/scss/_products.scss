@@ -1,4 +1,11 @@
 .products {
+  &.see-also {
+    .container-ul {
+      li {
+        border-left: 0;
+      }
+    }
+  }
   display: inline-grid;
   .container-ul {
     position:relative;
@@ -29,6 +36,9 @@
         letter-spacing: 1.4px;
         line-height: 18px;
         margin-bottom: 20px;
+        a {
+          color: $text-color;
+        }
       }
       .price {
         .price {

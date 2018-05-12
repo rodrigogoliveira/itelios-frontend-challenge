@@ -41,6 +41,10 @@
       display: inline-block;
       width: 12px;
       height: 12px;
+      &:hover,
+      &.active {
+        background-color: darken($border, 20%);
+      }
     }
   }
 }
