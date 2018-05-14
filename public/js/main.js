@@ -53,15 +53,21 @@
             }
          },
          jqxhr = $.getJSON( "public/json/products.json", function(data) {
-            var products = [];
+            var item,
+                products = [];
 
             $.each(data, function(key, value) {
+                if (value.data.item) {
+                    item = createProduct(value.data.item);
+                }
                 if(value.data.recommendation) {
-                    $.each(value.data.recommendation, function(keyValue, valueValue) {
-                        products.push(createProduct(valueValue))
+                    $.each(value.data.recommendation, function(productKey, productValue) {
+                        products.push(createProduct(productValue))
                     })
                 }
             });
+
+            $("<ul/>", { "class": "container-ul", html: item }).appendTo($('#visited-item'));
 
             $("<ul/>", {
                 "class": "container-ul",
@@ -83,15 +89,20 @@
                 });
                 makeBulets();
             }
-        );
+        ),
+        getClickValue = function() {
+            var containerWidth = $('#carouselContainer .container-inner').outerWidth(),
+                itemWidth = $('#carouselUl li').outerWidth(),
+                visibleItemCount = containerWidth/itemWidth
+                totalAnimateArea = itemWidth*visibleItemCount;
+
+            return totalAnimateArea;
+        };
 
     $('#carouselUl li:first').before($('#carouselUl li:last'));
 
     $('#rightScroll img').click(function() {
-        var containerWidth = $('#carouselContainer .container-inner').outerWidth(),
-            itemWidth = $('#carouselUl li').outerWidth(),
-            visibleItemCount = containerWidth/itemWidth
-            totalAnimateArea = itemWidth*visibleItemCount,
+        var totalAnimateArea = getClickValue(),
             leftIndent = parseInt($('#carouselUl').css('left')) - totalAnimateArea;
 
         $('#carouselUl:not(:animated)').animate(
@@ -107,10 +118,7 @@
     });
 
     $('#leftScroll img').click(function(){
-        var containerWidth = $('#carouselContainer .container-inner').outerWidth(),
-            itemWidth = $('#carouselUl li').outerWidth(),
-            visibleItemCount = containerWidth/itemWidth
-            totalAnimateArea = itemWidth*visibleItemCount,
+        var totalAnimateArea = getClickValue(),
             leftIndent = parseInt($('#carouselUl').css('left')) + totalAnimateArea;
         
         $('#carouselUl:not(:animated)').animate(
