@@ -1,3 +1,13 @@
+## Como rodar
+- baixe o código
+- rode npm install para baixar as dependências
+- para gerar o CSS rodar npm run watch-css
+- para ver o responsivo, diminua ou almente sua tela, o carrossel se adapta sozinho, inclusive o JS pega a área visível e adapta a quantidade de produtos que muda.
+- Foi usado SASS para o CSS e jQuery para o JS
+
+
+
+
 ![Itelios](http://www.itelios.com.br/images/logo_itelios_orange@2x.png)
 
 # Itelios Frontend Challenge
