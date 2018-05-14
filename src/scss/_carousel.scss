@@ -41,6 +41,7 @@
       display: inline-block;
       width: 12px;
       height: 12px;
+      margin: 0 5px; 
       &:hover,
       &.active {
         background-color: darken($border, 20%);
